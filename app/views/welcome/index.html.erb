@@ -1,0 +1,58 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="max-w-4xl mx-auto">
+    <div class="flex justify-center mb-8">
+      <img src="/foundit_logo_camper_final.svg" alt="FoundIT Logo" width="120" height="120">
+    </div>
+    
+    <div class="bg-white border-2 border-black shadow-[5px_5px_0_#e21836] p-6 mb-8">
+      <h1 class="text-3xl font-bold mb-4">Welcome to FoundIT, <%= @user.name %>!</h1>
+      <p class="text-lg mb-4">Your personal item tracking assistant is ready to help you keep track of all your belongings.</p>
+      
+      <div class="bg-gray-100 border border-gray-300 p-4 rounded-sm mb-6">
+        <h2 class="text-xl font-bold mb-2">Quick Stats</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="text-center p-3">
+            <span class="block text-3xl font-bold">0</span>
+            <span class="text-gray-600">Items Registered</span>
+          </div>
+          <div class="text-center p-3">
+            <span class="block text-3xl font-bold">0</span>
+            <span class="text-gray-600">Items Found</span>
+          </div>
+          <div class="text-center p-3">
+            <span class="block text-3xl font-bold">0</span>
+            <span class="text-gray-600">Active Searches</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="border-2 border-black shadow-[3px_3px_0_#e21836] p-4">
+          <h3 class="text-xl font-bold mb-3">Register New Item</h3>
+          <p class="mb-4">Add your valuable items to FoundIT to make them easier to recover if lost.</p>
+          <button class="bg-black text-white font-bold py-2 px-4 hover:bg-gray-800">
+            Register Item
+          </button>
+        </div>
+        
+        <div class="border-2 border-black shadow-[3px_3px_0_#e21836] p-4">
+          <h3 class="text-xl font-bold mb-3">Report Lost Item</h3>
+          <p class="mb-4">Lost something? Report it here and we'll help you find it.</p>
+          <button class="bg-black text-white font-bold py-2 px-4 hover:bg-gray-800">
+            Report Lost
+          </button>
+        </div>
+      </div>
+      
+      <div class="border-2 border-black shadow-[3px_3px_0_#e21836] p-4 mb-8">
+        <h3 class="text-xl font-bold mb-3">Recent Activity</h3>
+        <p class="text-gray-600 italic">No recent activity to display.</p>
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <p class="mb-2">Need help? <a href="#" class="text-blue-600 hover:underline">Contact Support</a></p>
+      <%= button_to "Sign Out", session_path, method: :delete, class: "text-red-600 hover:underline" %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect x="0" y="0" width="512" height="512" fill="#ffffff" />
+  
+  <!-- Main Tag Shape - Centered and Larger -->
+  <g transform="translate(256, 200)">
+    <!-- Tag Body -->
+    <rect x="-120" y="-120" width="240" height="240" rx="0" ry="0" fill="#e21836" />
+    
+    <!-- Tag Hole -->
+    <circle cx="0" cy="-80" r="25" fill="#ffffff" />
+    
+    <!-- QR Code Elements (Simplified) -->
+    <g fill="#ffffff">
+      <!-- Position markers and data elements -->
+      <rect x="-80" y="-50" width="35" height="35" />
+      <rect x="-80" y="0" width="35" height="35" />
+      <rect x="-80" y="50" width="35" height="35" />
+      
+      <rect x="-30" y="-50" width="35" height="35" />
+      <rect x="-30" y="50" width="35" height="35" />
+      
+      <rect x="20" y="-50" width="35" height="35" />
+      <rect x="20" y="0" width="35" height="35" />
+      <rect x="20" y="50" width="35" height="35" />
+      
+      <rect x="70" y="-50" width="35" height="35" />
+      <rect x="70" y="50" width="35" height="35" />
+    </g>
+  </g>
+  
+  <!-- Typography in Camper Style -->
+  <g transform="translate(256, 360)">
+    <!-- FOUND IT text -->
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#000000" letter-spacing="4" text-transform="uppercase">FOUNDIT</text>
+    
+    <!-- Tagline -->
+    <text x="0" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#e21836" letter-spacing="2">TRACK · FIND · RECOVER</text>
+  </g>
+</svg>

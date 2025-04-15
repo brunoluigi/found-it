@@ -1,0 +1,97 @@
+<div class="apple-login-container">
+  <div class="apple-login-box">
+    <div class="apple-logo">
+      <img src="/foundit_logo_camper_final.svg" alt="FoundIT Logo" width="180" height="180">
+    </div>
+    
+    <h1 class="apple-title">Create your account</h1>
+    
+    <% if alert = flash[:alert] %>
+      <div class="apple-alert" id="alert"><%= alert %></div>
+    <% end %>
+
+    <% if notice = flash[:notice] %>
+      <div class="apple-notice" id="notice"><%= notice %></div>
+    <% end %>
+
+    <%= form_with model: @user, url: registration_path, class: "apple-form" do |form| %>
+      <% if @user.errors.any? %>
+        <div class="apple-alert">
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="apple-form-group">
+        <%= form.text_field :name, 
+            required: true, 
+            autofocus: true, 
+            placeholder: "Full name", 
+            class: "apple-input" %>
+      </div>
+
+      <div class="apple-form-group">
+        <%= form.email_field :email_address, 
+            required: true, 
+            autocomplete: "email", 
+            placeholder: "Email address", 
+            class: "apple-input" %>
+      </div>
+
+      <div class="apple-form-group">
+        <%= form.telephone_field :phone, 
+            required: true, 
+            placeholder: "Phone", 
+            class: "apple-input",
+            pattern: "[0-9\s\(\)\-\+]*",
+            inputmode: "numeric" %>
+      </div>
+
+      <div class="apple-form-group">
+        <%= form.password_field :password, 
+            required: true, 
+            autocomplete: "new-password", 
+            placeholder: "Password (min. 8 characters)", 
+            minlength: 8,
+            class: "apple-input" %>
+      </div>
+
+      <div class="apple-form-group">
+        <%= form.password_field :password_confirmation, 
+            required: true, 
+            autocomplete: "new-password", 
+            placeholder: "Confirm password", 
+            minlength: 8,
+            class: "apple-input" %>
+      </div>
+
+      <div class="apple-form-actions">
+        <%= form.submit "Create Account", class: "apple-button" %>
+      </div>
+    <% end %>
+    
+    <div class="apple-divider">
+      <span>or</span>
+    </div>
+    
+    <div class="apple-create-account">
+      <p>Already have an account? <%= link_to "Sign in", new_session_path, class: "apple-link" %></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const phoneInput = document.querySelector('input[name="user[phone]"]');
+    
+    // Handle form submission
+    const form = document.querySelector('.apple-form');
+    form.addEventListener('submit', function(e) {
+      // Just keep the phone number as entered by the user
+      // No special formatting needed
+    });
+  });
+</script>

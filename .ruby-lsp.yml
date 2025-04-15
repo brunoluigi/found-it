@@ -1,0 +1,34 @@
+---
+formatter:
+  rubocop:
+    command: ["bundle", "exec", "rubocop", "--autocorrect"]
+    
+diagnostics:
+  enabled: true
+  rubocop:
+    enabled: true
+    command: ["bundle", "exec", "rubocop", "--format", "json", "--force-exclusion"]
+
+completion:
+  enabled: true
+
+hover:
+  enabled: true
+
+definition:
+  enabled: true
+
+folding:
+  enabled: true
+
+document_highlight:
+  enabled: true
+
+document_symbols:
+  enabled: true
+
+selection_ranges:
+  enabled: true
+
+semantic_highlighting:
+  enabled: true

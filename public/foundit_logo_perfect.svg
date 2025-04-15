@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect x="0" y="0" width="512" height="512" fill="#ffffff" />
+  
+  <!-- Main Tag Shape - Wider -->
+  <g transform="translate(256, 180)">
+    <!-- Tag Body -->
+    <rect x="-180" y="-100" width="360" height="200" rx="0" ry="0" fill="#e21836" />
+    
+    <!-- Tag Hole -->
+    <circle cx="-140" cy="-50" r="20" fill="#ffffff" />
+    
+    <!-- QR Code Elements (Simplified) -->
+    <g fill="#ffffff">
+      <!-- Position markers and data elements - Left Side -->
+      <rect x="-150" y="-40" width="30" height="30" />
+      <rect x="-150" y="0" width="30" height="30" />
+      <rect x="-150" y="40" width="30" height="30" />
+      
+      <rect x="-110" y="-40" width="30" height="30" />
+      <rect x="-110" y="40" width="30" height="30" />
+      
+      <rect x="-70" y="-40" width="30" height="30" />
+      <rect x="-70" y="0" width="30" height="30" />
+      <rect x="-70" y="40" width="30" height="30" />
+      
+      <!-- Position markers and data elements - Center -->
+      <rect x="-30" y="-40" width="30" height="30" />
+      <rect x="-30" y="40" width="30" height="30" />
+      
+      <rect x="10" y="-40" width="30" height="30" />
+      <rect x="10" y="0" width="30" height="30" />
+      <rect x="10" y="40" width="30" height="30" />
+      
+      <!-- Position markers and data elements - Right Side -->
+      <rect x="50" y="-40" width="30" height="30" />
+      <rect x="50" y="40" width="30" height="30" />
+      
+      <rect x="90" y="-40" width="30" height="30" />
+      <rect x="90" y="0" width="30" height="30" />
+      <rect x="90" y="40" width="30" height="30" />
+      
+      <rect x="130" y="-40" width="30" height="30" />
+      <rect x="130" y="40" width="30" height="30" />
+    </g>
+  </g>
+  
+  <!-- Typography with more interesting font style -->
+  <g transform="translate(256, 370)">
+    <!-- FOUND text - stylized -->
+    <g transform="translate(-120, 0)">
+      <!-- F -->
+      <path d="M-40,-30 H10 V-15 H-20 V-5 H5 V10 H-20 V40 H-40 Z" fill="#000000"/>
+      <!-- O -->
+      <path d="M20,-30 Q40,-30 50,-15 Q60,0 60,20 Q60,40 50,55 Q40,70 20,70 Q0,70 -10,55 Q-20,40 -20,20 Q-20,0 -10,-15 Q0,-30 20,-30 Z M20,-10 Q15,-10 10,-2 Q5,6 5,20 Q5,34 10,42 Q15,50 20,50 Q25,50 30,42 Q35,34 35,20 Q35,6 30,-2 Q25,-10 20,-10 Z" fill="#000000"/>
+      <!-- U -->
+      <path d="M70,-30 H90 V30 Q90,50 80,60 Q70,70 55,70 Q40,70 30,60 Q20,50 20,30 V-30 H40 V30 Q40,40 45,45 Q50,50 55,50 Q60,50 65,45 Q70,40 70,30 Z" fill="#000000"/>
+      <!-- N -->
+      <path d="M100,-30 H120 V40 H140 V-30 H160 V70 H140 V50 H120 V70 H100 Z" fill="#000000"/>
+      <!-- D -->
+      <path d="M170,-30 H195 Q215,-30 225,-15 Q235,0 235,20 Q235,40 225,55 Q215,70 195,70 H170 Z M190,-10 V50 H195 Q200,50 205,42 Q210,34 210,20 Q210,6 205,-2 Q200,-10 195,-10 Z" fill="#000000"/>
+    </g>
+    
+    <!-- IT text - stylized -->
+    <g transform="translate(120, 0)">
+      <!-- I -->
+      <path d="M-20,-30 H20 V-10 H10 V50 H20 V70 H-20 V50 H-10 V-10 H-20 Z" fill="#e21836"/>
+      <!-- T -->
+      <path d="M30,-30 H90 V-10 H70 V70 H50 V-10 H30 Z" fill="#e21836"/>
+    </g>
+    
+    <!-- Tagline -->
+    <text x="0" y="90" font-family="Arial, sans-serif" font-size="20" font-weight="normal" text-anchor="middle" fill="#e21836" letter-spacing="2">TRACK · FIND · RECOVER</text>
+  </g>
+</svg>

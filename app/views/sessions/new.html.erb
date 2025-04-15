@@ -1,0 +1,54 @@
+<div class="apple-login-container">
+  <div class="apple-login-box">
+    <div class="apple-logo">
+      <img src="/foundit_logo_camper_final.svg" alt="FoundIT Logo" width="180" height="180">
+    </div>
+    
+    <h1 class="apple-title">Sign in to FoundIT</h1>
+    
+    <% if alert = flash[:alert] %>
+      <div class="apple-alert" id="alert"><%= alert %></div>
+    <% end %>
+
+    <% if notice = flash[:notice] %>
+      <div class="apple-notice" id="notice"><%= notice %></div>
+    <% end %>
+
+    <%= form_with url: session_url, class: "apple-form" do |form| %>
+      <div class="apple-form-group">
+        <%= form.email_field :email_address, 
+            required: true, 
+            autofocus: true, 
+            autocomplete: "username", 
+            placeholder: "Email address", 
+            value: params[:email_address], 
+            class: "apple-input" %>
+      </div>
+
+      <div class="apple-form-group">
+        <%= form.password_field :password, 
+            required: true, 
+            autocomplete: "current-password", 
+            placeholder: "Password", 
+            maxlength: 72, 
+            class: "apple-input" %>
+      </div>
+
+      <div class="apple-form-actions">
+        <%= form.submit "Sign in", class: "apple-button" %>
+      </div>
+      
+      <div class="apple-links">
+        <%= link_to "Forgot password?", new_password_path, class: "apple-link" %>
+      </div>
+    <% end %>
+    
+    <div class="apple-divider">
+      <span>or</span>
+    </div>
+    
+    <div class="apple-create-account">
+      <p>Don't have an account? <%= link_to "Create yours now", new_registration_path, class: "apple-link" %></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="#0071e3" />
+  
+  <!-- QR Code Design (Simplified) -->
+  <rect x="136" y="136" width="240" height="240" rx="16" ry="16" fill="#ffffff" />
+  
+  <!-- QR Code Elements -->
+  <g fill="#0071e3">
+    <!-- Top-left position marker -->
+    <rect x="160" y="160" width="48" height="48" />
+    <rect x="172" y="172" width="24" height="24" fill="#ffffff" />
+    <rect x="178" y="178" width="12" height="12" />
+    
+    <!-- Top-right position marker -->
+    <rect x="304" y="160" width="48" height="48" />
+    <rect x="316" y="172" width="24" height="24" fill="#ffffff" />
+    <rect x="322" y="178" width="12" height="12" />
+    
+    <!-- Bottom-left position marker -->
+    <rect x="160" y="304" width="48" height="48" />
+    <rect x="172" y="316" width="24" height="24" fill="#ffffff" />
+    <rect x="178" y="322" width="12" height="12" />
+    
+    <!-- QR Code data elements (simplified) -->
+    <rect x="224" y="160" width="16" height="16" />
+    <rect x="256" y="160" width="16" height="16" />
+    <rect x="272" y="160" width="16" height="16" />
+    
+    <rect x="224" y="192" width="16" height="16" />
+    <rect x="256" y="192" width="16" height="16" />
+    <rect x="272" y="192" width="16" height="16" />
+    
+    <rect x="160" y="224" width="16" height="16" />
+    <rect x="192" y="224" width="16" height="16" />
+    <rect x="224" y="224" width="16" height="16" />
+    <rect x="304" y="224" width="16" height="16" />
+    
+    <rect x="160" y="256" width="16" height="16" />
+    <rect x="224" y="256" width="16" height="16" />
+    <rect x="256" y="256" width="16" height="16" />
+    <rect x="304" y="256" width="16" height="16" />
+    
+    <rect x="224" y="304" width="16" height="16" />
+    <rect x="256" y="304" width="16" height="16" />
+    <rect x="288" y="304" width="16" height="16" />
+  </g>
+  
+  <!-- Tag Icon with better contrast -->
+  <g transform="translate(340, 340) rotate(45)">
+    <rect x="-30" y="-45" width="60" height="90" rx="10" ry="10" fill="#ffcc00" stroke="#0071e3" stroke-width="5" />
+    <circle cx="0" cy="-25" r="10" fill="#0071e3" />
+  </g>
+  
+  <!-- Magnifying Glass with better contrast -->
+  <g transform="translate(172, 172)">
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#ffcc00" stroke-width="10" />
+    <line x1="20" y1="20" x2="40" y2="40" stroke="#ffcc00" stroke-width="10" stroke-linecap="round" />
+  </g>
+  
+  <!-- Text "FoundIT" -->
+  <text x="256" y="420" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#ffffff">FoundIT</text>
+</svg>
