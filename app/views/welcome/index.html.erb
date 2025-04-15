@@ -30,9 +30,11 @@
         <div class="border-2 border-black shadow-[3px_3px_0_#e21836] p-4">
           <h3 class="text-xl font-bold mb-3">Register New Item</h3>
           <p class="mb-4">Add your valuable items to FoundIT to make them easier to recover if lost.</p>
-          <button class="bg-black text-white font-bold py-2 px-4 hover:bg-gray-800">
-            Register Item
-          </button>
+          <%= link_to new_item_path, class: '' do %>
+            <button class="bg-black text-white font-bold py-2 px-4 hover:bg-gray-800">
+              Register Item
+            </button>
+          <% end %>
         </div>
         
         <div class="border-2 border-black shadow-[3px_3px_0_#e21836] p-4">

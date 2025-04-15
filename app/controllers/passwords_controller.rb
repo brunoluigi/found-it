@@ -7,7 +7,11 @@ class PasswordsController < ApplicationController
 
   def create
     if user = User.find_by(email_address: params[:email_address])
-      PasswordsMailer.reset(user).deliver_later
+      mailer = PasswordsMailer.reset(user)
+
+      pp mailer.text_part.body.to_s if Rails.env.dev?
+
+      mailer.deliver_later
     end
 
     redirect_to new_session_path, notice: "Password reset instructions sent (if user with that email address exists)."
