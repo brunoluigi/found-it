@@ -5,7 +5,7 @@
         <img src="/foundit_logo_camper.svg" alt="FoundIT Logo" class="h-6 w-auto m-0 pt-2">
       <% end %>
     </div>
-    <nav class="flex-1 flex justify-center gap-4 xl:gap-6">
+    <nav class="flex-1 flex justify-center gap-4 xl:gap-6 font-bold uppercase">
       <% if authenticated? %>
         <%= link_to 'My Items', items_path, class: 'text-gray-700 hover:text-gray-900' %>
         <%= link_to 'Register Item', new_item_path, class: 'text-gray-700 hover:text-gray-900' %>
