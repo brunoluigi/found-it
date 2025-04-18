@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   normalizes :email_address, with: ->(e) { e.strip.downcase }
   normalizes :name, with: ->(n) { n.strip }
-  normalizes :phone, with: ->(p) { p.gsub(/\D/, '') }
+  normalizes :phone, with: ->(p) { p.gsub(/\D/, "") }
 
   validates :name, presence: true
   validates :email_address, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }

@@ -58,10 +58,10 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  
+
   # Ruby Language Server for code intelligence features
   gem "ruby-lsp", require: false
-  
+
   # Additional formatters for Ruby LSP
   gem "ruby-lsp-rails", require: false
   gem "ruby-lsp-rspec", require: false
