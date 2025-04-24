@@ -1,7 +1,1 @@
-<div class="max-w-xl mx-auto bg-white border-2 border-black shadow-[5px_5px_0_#e21836] p-8 mt-10">
-  <h1 class="text-2xl font-bold mb-6">Register New Item</h1>
-  <%= render 'form', item: @item %>
-  <div class="mt-6">
-    <%= link_to 'Back', items_path, class: 'bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-700 transition-colors' %>
-  </div>
-</div>
+<%= render RubyUI::NewItemPage.new(item: @item) %>
