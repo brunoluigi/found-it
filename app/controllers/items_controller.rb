@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
 
   def new
     @item = Current.user.items.build
+    render RubyUI::NewItemPage.new(item: @item)
   end
 
   def create
@@ -17,18 +18,19 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to @item, notice: "Item was successfully created."
     else
-      render :new, status: :unprocessable_entity
+      render RubyUI::NewItemPage.new(item: @item), status: :unprocessable_entity
     end
   end
 
   def edit
+    render RubyUI::EditItemPage.new(item: @item)
   end
 
   def update
     if @item.update(item_params)
       redirect_to @item, notice: "Item was successfully updated."
     else
-      render :edit, status: :unprocessable_entity
+      render RubyUI::EditItemPage.new(item: @item), status: :unprocessable_entity
     end
   end
 
