@@ -1,71 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 256">
   <!-- Background -->
-  <rect x="0" y="0" width="512" height="512" fill="#ffffff" />
-  
-  <!-- Camper-inspired red circle -->
-  <circle cx="256" cy="200" r="120" fill="#e21836" />
-  
-  <!-- QR Code Design (Simplified) in white on red circle -->
-  <g fill="#ffffff">
-    <!-- Top-left position marker -->
-    <rect x="196" y="140" width="36" height="36" />
-    <rect x="205" y="149" width="18" height="18" fill="#e21836" />
-    <rect x="209" y="153" width="10" height="10" />
+  <!-- Main Tag Shape - Centered -->
+  <g transform="translate(48, 100)">
+    <!-- Tag Body -->
+    <rect x="-100" y="-100" width="200" height="200" rx="0" ry="0" fill="#e21836" />
     
-    <!-- Top-right position marker -->
-    <rect x="280" y="140" width="36" height="36" />
-    <rect x="289" y="149" width="18" height="18" fill="#e21836" />
-    <rect x="293" y="153" width="10" height="10" />
+    <!-- Tag Hole -->
+    <circle cx="0" cy="-70" r="20" fill="#ffffff" />
     
-    <!-- Bottom-left position marker -->
-    <rect x="196" y="224" width="36" height="36" />
-    <rect x="205" y="233" width="18" height="18" fill="#e21836" />
-    <rect x="209" y="237" width="10" height="10" />
-    
-    <!-- QR Code data elements (simplified) -->
-    <rect x="240" y="140" width="12" height="12" />
-    <rect x="260" y="140" width="12" height="12" />
-    
-    <rect x="240" y="160" width="12" height="12" />
-    <rect x="260" y="160" width="12" height="12" />
-    <rect x="280" y="160" width="12" height="12" />
-    
-    <rect x="196" y="180" width="12" height="12" />
-    <rect x="216" y="180" width="12" height="12" />
-    <rect x="240" y="180" width="12" height="12" />
-    <rect x="280" y="180" width="12" height="12" />
-    <rect x="300" y="180" width="12" height="12" />
-    
-    <rect x="196" y="200" width="12" height="12" />
-    <rect x="240" y="200" width="12" height="12" />
-    <rect x="260" y="200" width="12" height="12" />
-    <rect x="300" y="200" width="12" height="12" />
-    
-    <rect x="216" y="224" width="12" height="12" />
-    <rect x="240" y="224" width="12" height="12" />
-    <rect x="260" y="224" width="12" height="12" />
-    <rect x="280" y="224" width="12" height="12" />
-  </g>
-  
-  <!-- Tag Icon -->
-  <g transform="translate(380, 150)">
-    <rect x="-25" y="-40" width="50" height="80" rx="8" ry="8" fill="#000000" />
-    <circle cx="0" cy="-20" r="8" fill="#ffffff" />
-  </g>
-  
-  <!-- Camper-inspired Typography -->
-  <g transform="translate(256, 360)">
-    <!-- "FOUND" text -->
-    <text x="0" y="0" font-family="Arial, sans-serif" font-size="60" font-weight="bold" text-anchor="middle" fill="#000000" letter-spacing="2">FOUND</text>
-    
-    <!-- "IT" text with Camper-style red -->
-    <text x="0" y="70" font-family="Arial, sans-serif" font-size="90" font-weight="bold" text-anchor="middle" fill="#e21836" letter-spacing="2">IT</text>
-  </g>
-  
-  <!-- Magnifying Glass -->
-  <g transform="translate(140, 150)">
-    <circle cx="0" cy="0" r="30" fill="none" stroke="#000000" stroke-width="10" />
-    <line x1="22" y1="22" x2="40" y2="40" stroke="#000000" stroke-width="10" stroke-linecap="round" />
+    <!-- QR Code Elements (Simplified) -->
+    <g fill="#ffffff">
+      <!-- Position markers and data elements -->
+      <rect x="-60" y="-40" width="30" height="30" />
+      <rect x="-60" y="0" width="30" height="30" />
+      <rect x="-60" y="40" width="30" height="30" />
+      
+      <rect x="-20" y="-40" width="30" height="30" />
+      <rect x="-20" y="40" width="30" height="30" />
+      
+      <rect x="20" y="-40" width="30" height="30" />
+      <rect x="20" y="0" width="30" height="30" />
+      <rect x="20" y="40" width="30" height="30" />
+    </g>
   </g>
 </svg>
