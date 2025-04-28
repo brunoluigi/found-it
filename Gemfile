@@ -19,6 +19,9 @@ gem "tailwindcss-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "phlex-rails", "~> 2.2"
+gem "tailwind_merge", "~> 1.2"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
 
@@ -56,12 +59,14 @@ group :development, :test do
 end
 
 group :development do
+  gem "ruby_ui", require: false
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  
+
   # Ruby Language Server for code intelligence features
   gem "ruby-lsp", require: false
-  
+
   # Additional formatters for Ruby LSP
   gem "ruby-lsp-rails", require: false
   gem "ruby-lsp-rspec", require: false
