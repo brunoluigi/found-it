@@ -2,10 +2,13 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @items = Current.user.items.order(created_at: :desc)
+    items = Current.user.items.order(created_at: :desc)
+
+    render RubyUI::ItemsIndexPage.new(items:)
   end
 
   def show
+    render RubyUI::ShowItemPage.new(item: @item)
   end
 
   def new
