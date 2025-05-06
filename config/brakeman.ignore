@@ -1,0 +1,74 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "7ffdd39e6f2e3e27ff48020290e66857b7ac50241acc4de2e54ed9f5edb668b8",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/controllers/items_controller.rb",
+      "line": 36,
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(action => RubyUI::EditItemPage.new(:item => Current.user.items.find(params[:id])), { :status => :unprocessable_entity })",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "ItemsController",
+        "method": "update"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "cwe_id": [
+        22
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "aa25af0eb8c7113351510a3296ea924572ec93af26012494cae7653beb1d7f53",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/controllers/items_controller.rb",
+      "line": 11,
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(action => RubyUI::ShowItemPage.new(:item => Current.user.items.find(params[:id])), {})",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "ItemsController",
+        "method": "show"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "cwe_id": [
+        22
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "be70102281bae17581a4576c65903dbc30de14a92f0d927901dbca57d8cacca4",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/controllers/items_controller.rb",
+      "line": 29,
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(action => RubyUI::EditItemPage.new(:item => Current.user.items.find(params[:id])), {})",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "ItemsController",
+        "method": "edit"
+      },
+      "user_input": "params[:id]",
+      "confidence": "Weak",
+      "cwe_id": [
+        22
+      ],
+      "note": ""
+    }
+  ],
+  "brakeman_version": "7.0.2"
+}
