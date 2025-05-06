@@ -4,6 +4,7 @@ module RubyUI
   class WelcomePage < Base
     def initialize(user:)
       @user = user
+      @items_count = user.items.count
     end
 
     def view_template
@@ -19,8 +20,8 @@ module RubyUI
 
             div(class: "bg-gray-100 border border-gray-300 p-4 rounded-sm mb-6") do
               Heading(level: 2, classes: "text-xl font-bold mb-2") { "Quick Stats" }
-              Grid(cols: 1, md_cols: 3, gap: 4) do
-                StatBlock(label: "Items Registered", value: 0)
+              div(class: "grid grid-cols-3 gap-4") do
+                StatBlock(label: "Items Registered", value: @items_count)
                 StatBlock(label: "Items Found", value: 0)
                 StatBlock(label: "Active Searches", value: 0)
               end
