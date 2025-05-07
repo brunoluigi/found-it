@@ -10,10 +10,6 @@ module RubyUI
     def view_template
       div(class: "container mx-auto px-4 py-8") do
         div(class: "max-w-4xl mx-auto") do
-          div(class: "flex justify-center mb-8") do
-            img(src: "/foundit_logo_camper_final.svg", alt: "FoundIT Logo", width: 120, height: 120)
-          end
-
           Card do
             Heading(level: 1, classes: "text-3xl font-bold mb-4") { "Welcome to FoundIT, #{@user.name}!" }
             Text(classes: "text-lg mb-4") { "Your personal item tracking assistant is ready to help you keep track of all your belongings." }
