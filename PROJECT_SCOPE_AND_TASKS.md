@@ -15,26 +15,50 @@ FoundIT is a platform to register and track items. Its goal is to make it possib
 
 ## Current Tasks
 
-| Task | Status | Owner | Notes |
-|------|--------|-------|-------|
-| Define MVP features | To Do | Bruno | |
-| Set up project repo | Done | Bruno | |
-| Design database schema | In Progress | Bruno | |
-| Implement authentication | Done | Bruno | |
-| Implement item registration | Done | Bruno | |
-| Implement PDF generation | To Do | | |
-| Implement QR code generation | Done | | |
-| Implement public found item reporting | To Do | | |
+| Task                                   | Status      | Owner  | Notes                |
+|---------------------------------------- |------------ |--------|----------------------|
+| Finalize MVP feature list               | To Do       | Bruno  |                      |
+| Complete database schema                | To Do       | Bruno  |                      |
+| Implement PDF generation                | To Do       |        |                      |
+| Integrate QR code into PDF              | To Do       |        |                      |
+| Implement found item reporting          | To Do       |        | It's a public space, so it should be anonymous |
+| Implement notifications                 | To Do       |        | Email or in-app?     |
+| Unit Testing                            | To Do       |        |                      |
+| End-to-end flow testing                 | To Do       |        |                      |
+| Update documentation                    | To Do       |        |                      |
+| Prepare deployment                      | To Do       |        |                      |
+| Design database schema                  | In Progress | Bruno  |                      |
+| Set up project repo                     | Done        | Bruno  |                      |
+| Implement authentication                | Done        | Bruno  |                      |
+| Implement item registration             | Done        | Bruno  |                      |
+| Implement QR code generation            | Done        |        |                      |
 
 ## Task Management
 - Use this file to track progress and direction.
 - Update the table above as tasks are started, completed, or reprioritized.
 - Add new tasks as needed.
 
-## Direction & Next Steps
-- Finalize MVP feature list (registration, PDF/QR generation, found item reporting)
-- Implement core item registration and tag generation features
-- Set up reporting flow for found items
+## Next Steps
+
+1. **Finalize MVP Feature List**
+    - Clearly define features for MVP: item registration, PDF/QR tag generation, public reporting, authentication, notifications.
+2. **Complete Database Schema Design**
+    - Finalize and document schema for users, items, tags, and reports.
+3. **Implement PDF Generation**
+    - Choose a PDF library and design tag layout.
+    - Integrate QR code into the PDF.
+4. **Implement Public Found Item Reporting**
+    - Create a web endpoint/page for reporting found items via QR code.
+    - Allow anonymous reporting and notify item owners.
+5. **Implement Notifications/Status Updates**
+    - Decide on and implement notification method (email, SMS, in-app).
+6. **Polish and Test Core Flows**
+    - Test full flow from registration to reporting and notification.
+    - Fix usability issues.
+7. **Documentation and Deployment**
+    - Update documentation.
+    - Prepare deployment scripts/instructions.
+    - Set up demo environment if needed.
 
 ---
 
