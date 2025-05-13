@@ -31,7 +31,7 @@ FoundIT is a platform to register and track items. Its goal is to make it possib
 | Complete database schema                | To Do       | Bruno  |                      |
 | Implement PDF generation                | To Do       |        |                      |
 | Integrate QR code into PDF              | To Do       |        |                      |
-| Implement found item reporting          | To Do       |        | It's a public space, so it should be anonymous |
+| Implement found item reporting          | Done        | Bruno  | It's a public space, so it should be anonymous |
 | Implement notifications                 | To Do       |        | Email or in-app?     |
 | Unit Testing                            | To Do       |        |                      |
 | End-to-end flow testing                 | To Do       |        |                      |

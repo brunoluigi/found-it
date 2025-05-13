@@ -7,6 +7,6 @@ class CreateItemViews < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
-    add_index :item_views, [:item_id, :ip_address, :anon_user_hash], unique: true, name: 'index_item_views_on_item_and_ip_and_anon_hash'
+    add_index :item_views, [ :item_id, :ip_address, :anon_user_hash ], unique: true, name: 'index_item_views_on_item_and_ip_and_anon_hash'
   end
 end
