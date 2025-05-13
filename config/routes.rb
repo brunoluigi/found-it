@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get "items/index"
-  get "items/show"
+  # Public item info endpoint by UUID
+  resources :item_views, only: [ :show, :update ] do
+    get "show", on: :collection
+  end
   get "items/new"
   get "items/create"
   get "items/edit"
