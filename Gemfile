@@ -68,6 +68,7 @@ group :development do
   gem "ruby-lsp", "~> 0.23.16", require: false
 
   # Additional formatters for Ruby LSP
+  gem "syntax_tree", "~> 6.2.0", require: false
   gem "ruby-lsp-rails", "~> 0.4.0", require: false
   gem "ruby-lsp-rspec", "~> 0.1.22", require: false
 end

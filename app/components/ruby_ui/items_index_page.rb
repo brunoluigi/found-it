@@ -14,7 +14,18 @@ module RubyUI
           Link(href: helpers.new_item_path, variant: :button) { "New Item" }
         end
 
-        ul(class: "mt-6 divide-y divide-gray-200") do
+        div(class: "mt-6 flex justify-end gap-4") do
+          div(class: "flex gap-2") do
+            Label(for: "show_found") { "Filter Found" }
+            Switch(id: "show_found", name: "show_found", checked_value: "1", unchecked_value: "0")
+          end
+          div(class: "flex gap-2") do
+            Label(for: "show_viewed") { "Filter Viewed" }
+            Switch(id: "show_viewed", name: "show_viewed", checked_value: "1", unchecked_value: "0")
+          end
+        end
+
+        ul(class: "divide-y divide-gray-200") do
           @items.each do |item|
             li(class: "flex justify-between items-center py-4 gap-6") do
               span(class: "flex-1") do

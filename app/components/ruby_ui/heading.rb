@@ -3,12 +3,12 @@
 module RubyUI
   class Heading < Base
     LEVELS = {
-      1 => "text-3xl font-bold mb-4",
-      2 => "text-2xl font-bold mb-4",
-      3 => "text-xl font-bold mb-3",
-      4 => "text-base font-bold",
-      5 => "text-sm font-bold",
-      6 => "text-xs font-bold"
+      1 => "text-3xl mb-4",
+      2 => "text-2xl mb-4",
+      3 => "text-xl mb-3",
+      4 => "text-base mb-1",
+      5 => "text-sm mb-0",
+      6 => "text-xs mb-0"
     }
 
     def initialize(level: 1, **attrs)
@@ -27,7 +27,7 @@ module RubyUI
 
     def default_attrs
       {
-        class: [ "font-bold mb-6", LEVELS[@level] ]
+        class: [ "font-bold", LEVELS[@level] ]
       }
     end
   end
