@@ -8,20 +8,31 @@ module RubyUI
       danger: "bg-red-600 text-white font-bold py-2 px-4 shadow-[3px_3px_0_#111] hover:bg-red-800 transition-all duration-150"
     }
 
-    def initialize(variant: :primary, classes: nil, href: nil, **attrs)
-      base_classes = VARIANT_CLASSES[variant.to_sym] || VARIANT_CLASSES[:primary]
-      @classes = [ base_classes, classes ].compact.join(" ")
+    def initialize(variant: :primary, href: nil, **attrs)
+      @variant = variant.to_sym
       @href = href
 
       super(**attrs)
     end
 
-    def view_template(&block)
+    def view_template(&)
       if @href
-        a(class: @classes, href: @href, **@attrs) { yield }
+        a(class: @class, href: @href, **attrs, &)
       else
-        button(class: @classes, **@attrs) { yield }
+        button(class: @class, **attrs, &)
       end
+    end
+
+    private
+
+    def default_classes
+      VARIANT_CLASSES[@variant] || VARIANT_CLASSES[:primary]
+    end
+
+    def default_attrs
+      {
+        class: default_classes
+      }
     end
   end
 end

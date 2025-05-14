@@ -20,7 +20,7 @@ class ItemViewsController < ApplicationController
   def update
     @item_view = ItemView.find(params[:id])
     if @item_view.update(found_it_message: params[:item_view][:found_it_message], found_it_at: Time.current)
-      redirect_to item_view_path(item_id: @item_view.item.id), notice: "Thank you for your help!"
+      redirect_to item_view_path(id: @item_view.item.id), notice: "Thank you for your help!"
     else
       render partial: "ruby_ui/found_it_form", locals: { item_view: @item_view }, status: :unprocessable_entity
     end

@@ -2,10 +2,8 @@
 
 module RubyUI
   class Card < Base
-    def view_template(&block)
-      div(**@attrs) do
-        yield
-      end
+    def view_template(&)
+      div(**@attrs, &)
     end
 
     private

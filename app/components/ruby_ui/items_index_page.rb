@@ -18,7 +18,7 @@ module RubyUI
           @items.each do |item|
             li(class: "flex justify-between items-center py-4 gap-6") do
               span(class: "flex-1") do
-                Link(href: helpers.item_path(item), classes: "hover:underline") { item.content.truncate(60) }
+                Link(href: helpers.item_path(item), class: "hover:underline") { item.content.truncate(60) }
               end
 
               span(class: "flex gap-2 flex-shrink-0") do

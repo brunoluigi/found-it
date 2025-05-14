@@ -10,7 +10,7 @@ module RubyUI
       raw(helpers.form_with(model: @item) do |form|
         render ErrorMessages.new(object: @item)
         div(class: "mb-4") do
-          Label(text: form.label(:content), for_attr: nil)
+          Label { form.label(:content) }
           TextArea(form:, field: :content)
         end
 

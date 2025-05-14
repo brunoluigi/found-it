@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 module RubyUI
-  class Text < Base
+  class Paragraph < Base
     def view_template(&)
-      span(**attrs, &)
+      p(**attrs, &)
     end
 
     private

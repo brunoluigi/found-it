@@ -2,15 +2,16 @@
 
 module RubyUI
   class Label < Base
-    def initialize(text:, for_attr: nil, classes: "block mb-2 font-semibold", **attrs)
-      @text = text
-      @for_attr = for_attr
-      @classes = classes
-      @attrs = attrs
+    def view_template(&)
+      label(**attrs, &)
     end
 
-    def view_template
-      label(class: @classes, for: @for_attr, **@attrs) { @text }
+    private
+
+    def default_attrs
+      {
+        class: "block mb-2 font-semibold"
+      }
     end
   end
 end
