@@ -4,7 +4,14 @@ class ItemsController < ApplicationController
   def index
     items = Current.user.items.order(created_at: :desc)
 
-    render RubyUI::ItemsIndexPage.new(items:)
+    if params[:show_found] == "1"
+      items = items.joins(:item_views).merge(ItemView.where.not(found_it_at: nil)).distinct
+    end
+    if params[:show_viewed] == "1"
+      items = items.joins(:item_views).distinct
+    end
+
+    render RubyUI::ItemsIndexPage.new(items: items, show_found: params[:show_found], show_viewed: params[:show_viewed])
   end
 
   def show

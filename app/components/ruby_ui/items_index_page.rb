@@ -2,8 +2,13 @@
 
 module RubyUI
   class ItemsIndexPage < Base
-    def initialize(items:)
+    include Phlex::Rails::Helpers::TurboFrameTag
+    include Phlex::Rails::Helpers::FormWith
+
+    def initialize(items:, show_found: nil, show_viewed: nil)
       @items = items
+      @show_found = show_found
+      @show_viewed = show_viewed
     end
 
     def view_template
@@ -14,22 +19,41 @@ module RubyUI
           Link(href: helpers.new_item_path, variant: :button) { "New Item" }
         end
 
-        div(class: "mt-6 flex justify-end gap-4") do
-          div(class: "flex gap-2") do
-            Label(for: "show_found") { "Filter Found" }
-            Switch(id: "show_found", name: "show_found", checked_value: "1", unchecked_value: "0")
+        turbo_frame_tag "items-list", data: { controller: "items-index-frame" } do
+          form_with url: helpers.items_path, method: :get, data: { turbo_frame: "items-list" }, class: "mt-6 flex justify-end gap-4 items-center", id: "items-filter-form" do
+            div(class: "flex gap-2") do
+              Label(for: "show_found") { "Filter Found" }
+              Switch(
+                id: "show_found",
+                name: "show_found",
+                checked_value: "1",
+                unchecked_value: "0",
+                checked: @show_found == "1",
+                data: { action: "change->items-index-page#filter" }
+              )
+            end
+            div(class: "flex gap-2") do
+              Label(for: "show_viewed") { "Filter Viewed" }
+              Switch(
+                id: "show_viewed",
+                name: "show_viewed",
+                checked_value: "1",
+                unchecked_value: "0",
+                checked: @show_viewed == "1",
+                data: { action: "change->items-index-page#filter" }
+              )
+            end
           end
-          div(class: "flex gap-2") do
-            Label(for: "show_viewed") { "Filter Viewed" }
-            Switch(id: "show_viewed", name: "show_viewed", checked_value: "1", unchecked_value: "0")
-          end
-        end
 
-        ul(class: "divide-y divide-gray-200") do
-          @items.each do |item|
+          div(id: "items-list-loading", class: "hidden w-full flex justify-center py-8") do
+            LoadingIcon()
+          end
+
+          ul(id: "items-list-list", class: "divide-y divide-gray-200 mt-4") do
+            @items.each do |item|
             li(class: "flex justify-between items-center py-4 gap-6") do
               span(class: "flex-1") do
-                Link(href: helpers.item_path(item), class: "hover:underline") { item.content.truncate(60) }
+                Link(href: helpers.item_path(item), data: { turbo_frame: "_top" }) { item.content.truncate(60) }
               end
 
               span(class: "flex gap-2 flex-shrink-0") do
@@ -52,7 +76,7 @@ module RubyUI
                     end
                   end
                 end
-                Link(href: helpers.edit_item_path(item)) { "Edit" }
+                Link(href: helpers.edit_item_path(item), data: { turbo_frame: "_top" }) { "Edit" }
                 Link(href: helpers.item_path(item), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }) { "Delete" }
               end
             end
@@ -60,5 +84,6 @@ module RubyUI
         end
       end
     end
+  end
   end
 end
