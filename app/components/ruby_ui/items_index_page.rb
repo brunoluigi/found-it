@@ -49,41 +49,48 @@ module RubyUI
             LoadingIcon()
           end
 
-          ul(id: "items-list-list", class: "divide-y divide-gray-200 mt-4") do
-            @items.each do |item|
-            li(class: "flex justify-between items-center py-4 gap-6") do
-              span(class: "flex-1") do
-                Link(href: helpers.item_path(item), data: { turbo_frame: "_top" }) { item.content.truncate(60) }
-              end
-
-              span(class: "flex gap-2 flex-shrink-0") do
-                HoverCard do
-                  HoverCardTrigger do
-                    Link(id: "items-qrcode-link-#{item.id}", href: "#", class: "block") { "QR Code" }
+          if @items.empty?
+            div(class: "flex flex-col items-center justify-center py-12") do
+              EmptyListIcon()
+              span(class: "mt-4 text-lg text-gray-700 font-semibold") { "Nothing here =/" }
+            end
+          else
+            ul(id: "items-list-list", class: "divide-y divide-gray-200 mt-4") do
+              @items.each do |item|
+                li(class: "flex justify-between items-center py-4 gap-6") do
+                  span(class: "flex-1") do
+                    Link(href: helpers.item_path(item), data: { turbo_frame: "_top" }) { item.content.truncate(60) }
                   end
-                  HoverCardContent do
-                    div(class: "flex flex-col gap-4") do
-                      qrcode = RQRCode::QRCode.new(helpers.item_view_url(item))
-                      div { helpers.raw qrcode.as_svg(module_size: 3, standalone: true) }
 
-                      Clipboard(success: "Copied!", error: "Copy failed!", class: "relative", options: { placement: "top" }) do
-                        ClipboardSource(class: "hidden") { span { helpers.item_view_url(item) } }
+                  span(class: "flex gap-2 flex-shrink-0") do
+                    HoverCard do
+                      HoverCardTrigger do
+                        Link(id: "items-qrcode-link-#{item.id}", href: "#", class: "block") { "QR Code" }
+                      end
+                      HoverCardContent do
+                        div(class: "flex flex-col gap-4") do
+                          qrcode = RQRCode::QRCode.new(helpers.item_view_url(item))
+                          div { helpers.raw qrcode.as_svg(module_size: 3, standalone: true) }
 
-                        ClipboardTrigger do
-                          Link(href: "#") { "Copy Link" }
+                          Clipboard(success: "Copied!", error: "Copy failed!", class: "relative", options: { placement: "top" }) do
+                            ClipboardSource(class: "hidden") { span { helpers.item_view_url(item) } }
+
+                            ClipboardTrigger do
+                              Link(href: "#") { "Copy Link" }
+                            end
+                          end
                         end
                       end
                     end
+                    Link(href: helpers.edit_item_path(item), data: { turbo_frame: "_top" }) { "Edit" }
+                    Link(href: helpers.item_path(item), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }) { "Delete" }
                   end
                 end
-                Link(href: helpers.edit_item_path(item), data: { turbo_frame: "_top" }) { "Edit" }
-                Link(href: helpers.item_path(item), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }) { "Delete" }
               end
             end
           end
         end
       end
     end
-  end
   end
 end
