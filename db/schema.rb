@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_04_15_100308) do
+ActiveRecord::Schema[8.0].define(version: 2025_05_08_142300) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
+
+  create_table "item_views", force: :cascade do |t|
+    t.uuid "item_id", null: false
+    t.string "ip_address", null: false
+    t.string "anon_user_hash", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "found_it_at"
+    t.text "found_it_message"
+    t.index ["item_id", "ip_address", "anon_user_hash"], name: "index_item_views_on_item_and_ip_and_anon_hash", unique: true
+    t.index ["item_id"], name: "index_item_views_on_item_id"
+  end
 
   create_table "items", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.text "content"
@@ -41,6 +53,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_15_100308) do
     t.index ["email_address"], name: "index_users_on_email_address", unique: true
   end
 
+  add_foreign_key "item_views", "items"
   add_foreign_key "items", "users"
   add_foreign_key "sessions", "users"
 end

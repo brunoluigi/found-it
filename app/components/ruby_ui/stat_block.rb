@@ -6,6 +6,7 @@ module RubyUI
       @label = label
       @value = value
     end
+
     def view_template
       div(class: "text-center p-3") do
         span(class: "block text-3xl font-bold") { @value }

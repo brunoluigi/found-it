@@ -18,7 +18,7 @@ body {
   line-height: 1.5;
 }
 
-.apple-login-container {
+.found-it-login-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ body {
   padding: 20px;
 }
 
-.apple-login-box {
+.found-it-login-box {
   width: 100%;
   max-width: 450px;
   padding: 40px;
@@ -37,11 +37,11 @@ body {
   text-align: center;
 }
 
-.apple-logo {
+.found-it-logo {
   margin-bottom: 20px;
 }
 
-.apple-title {
+.found-it-title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -50,7 +50,7 @@ body {
   letter-spacing: 2px;
 }
 
-.apple-alert {
+.found-it-alert {
   background-color: rgba(255, 59, 48, 0.1);
   color: var(--error-red);
   padding: 12px;
@@ -60,7 +60,7 @@ body {
   font-size: 14px;
 }
 
-.apple-notice {
+.found-it-notice {
   background-color: rgba(52, 199, 89, 0.1);
   color: var(--success-green);
   padding: 12px;
@@ -70,15 +70,15 @@ body {
   font-size: 14px;
 }
 
-.apple-form {
+.found-it-form {
   margin-bottom: 20px;
 }
 
-.apple-form-group {
+.found-it-form-group {
   margin-bottom: 16px;
 }
 
-.apple-input {
+.found-it-input {
   width: 100%;
   padding: 15px;
   font-size: 16px;
@@ -89,17 +89,17 @@ body {
   transition: all 0.2s ease;
 }
 
-.apple-input:focus {
+.found-it-input:focus {
   outline: none;
   border-color: var(--camper-red);
   box-shadow: 4px 4px 0 var(--camper-black);
 }
 
-.apple-form-actions {
+.found-it-form-actions {
   margin-top: 24px;
 }
 
-.apple-button {
+.found-it-button {
   width: 100%;
   padding: 15px;
   font-size: 16px;
@@ -114,22 +114,22 @@ body {
   letter-spacing: 2px;
 }
 
-.apple-button:hover {
+.found-it-button:hover {
   background-color: var(--camper-black);
   box-shadow: 4px 4px 0 var(--camper-red);
 }
 
-.apple-button:active {
+.found-it-button:active {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0 var(--camper-red);
 }
 
-.apple-links {
+.found-it-links {
   margin-top: 16px;
   text-align: center;
 }
 
-.apple-link {
+.found-it-link {
   color: var(--camper-red);
   text-decoration: none;
   font-size: 14px;
@@ -139,25 +139,25 @@ body {
   letter-spacing: 1px;
 }
 
-.apple-link:hover {
+.found-it-link:hover {
   color: var(--camper-black);
   text-decoration: underline;
 }
 
-.apple-divider {
+.found-it-divider {
   display: flex;
   align-items: center;
   margin: 30px 0;
 }
 
-.apple-divider::before,
-.apple-divider::after {
+.found-it-divider::before,
+.found-it-divider::after {
   content: "";
   flex: 1;
   border-bottom: 2px solid var(--camper-black);
 }
 
-.apple-divider span {
+.found-it-divider span {
   padding: 0 10px;
   color: var(--camper-black);
   font-size: 14px;
@@ -165,7 +165,7 @@ body {
   text-transform: uppercase;
 }
 
-.apple-create-account {
+.found-it-create-account {
   font-size: 14px;
   color: var(--camper-black);
   font-weight: bold;
@@ -173,12 +173,12 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
-  .apple-login-box {
+  .found-it-login-box {
     padding: 30px 20px;
     box-shadow: 6px 6px 0 var(--camper-red);
   }
   
-  .apple-title {
+  .found-it-title {
     font-size: 24px;
   }
 }

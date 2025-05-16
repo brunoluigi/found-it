@@ -1,54 +1,54 @@
-<div class="apple-login-container">
-  <div class="apple-login-box">
-    <div class="apple-logo">
+<div class="found-it-login-container">
+  <div class="found-it-login-box">
+    <div class="found-it-logo">
       <img src="/foundit_logo_camper_final.svg" alt="FoundIT Logo" width="180" height="180">
     </div>
     
-    <h1 class="apple-title">Sign in to FoundIT</h1>
+    <h1 class="found-it-title">Sign in to FoundIT</h1>
     
     <% if alert = flash[:alert] %>
-      <div class="apple-alert" id="alert"><%= alert %></div>
+      <div class="found-it-alert" id="alert"><%= alert %></div>
     <% end %>
 
     <% if notice = flash[:notice] %>
-      <div class="apple-notice" id="notice"><%= notice %></div>
+      <div class="found-it-notice" id="notice"><%= notice %></div>
     <% end %>
 
-    <%= form_with url: session_url, class: "apple-form" do |form| %>
-      <div class="apple-form-group">
+    <%= form_with url: session_url, class: "found-it-form" do |form| %>
+      <div class="found-it-form-group">
         <%= form.email_field :email_address, 
             required: true, 
             autofocus: true, 
             autocomplete: "username", 
             placeholder: "Email address", 
             value: params[:email_address], 
-            class: "apple-input" %>
+            class: "found-it-input" %>
       </div>
 
-      <div class="apple-form-group">
+      <div class="found-it-form-group">
         <%= form.password_field :password, 
             required: true, 
             autocomplete: "current-password", 
             placeholder: "Password", 
             maxlength: 72, 
-            class: "apple-input" %>
+            class: "found-it-input" %>
       </div>
 
-      <div class="apple-form-actions">
-        <%= form.submit "Sign in", class: "apple-button" %>
+      <div class="found-it-form-actions">
+        <%= form.submit "Sign in", class: "found-it-button" %>
       </div>
       
-      <div class="apple-links">
-        <%= link_to "Forgot password?", new_password_path, class: "apple-link" %>
+      <div class="found-it-links">
+        <%= link_to "Forgot password?", new_password_path, class: "found-it-link" %>
       </div>
     <% end %>
     
-    <div class="apple-divider">
+    <div class="found-it-divider">
       <span>or</span>
     </div>
     
-    <div class="apple-create-account">
-      <p>Don't have an account? <%= link_to "Create yours now", new_registration_path, class: "apple-link" %></p>
+    <div class="found-it-create-account">
+      <p>Don't have an account? <%= link_to "Create yours now", new_registration_path, class: "found-it-link" %></p>
     </div>
   </div>
 </div>

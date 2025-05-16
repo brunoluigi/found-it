@@ -2,11 +2,16 @@
 
 module RubyUI
   class Text < Base
-    def initialize(classes: "")
-      @classes = classes
+    def view_template(&)
+      span(**attrs, &)
     end
-    def view_template(&block)
-      span(class: @classes) { yield }
+
+    private
+
+    def default_attrs
+      {
+        class: "text-md"
+      }
     end
   end
 end

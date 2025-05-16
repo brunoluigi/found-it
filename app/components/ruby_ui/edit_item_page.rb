@@ -7,8 +7,8 @@ module RubyUI
     end
 
     def view_template
-      Card(classes: "max-w-xl mx-auto bg-white border-2 border-black shadow-[5px_5px_0_#e21836] p-8 mt-10") do
-        Heading(level: 1, classes: "text-2xl font-bold mb-6") { "Edit Item" }
+      Card(class: "max-w-xl mx-auto") do
+        Heading(level: 1) { "Edit Item" }
         render ItemForm.new(item: @item)
         div(class: "mt-6") do
           render Link.new(href: helpers.items_path) { "Back" }

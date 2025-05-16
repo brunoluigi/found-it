@@ -6,6 +6,16 @@ _Last updated: 2025-05-07_
 
 FoundIT is a platform to register and track items. Its goal is to make it possible for users to create a PDF tag containing a QR code and basic information about an item. If somebody finds the item, they can scan the QR code to access FoundIT and report that the item was found.
 
+### Design choices
+
+- The platform should be simple and intuitive to use
+- The platform should be accessible
+- The platform should be secure
+- The platform should be fast
+- The platform should be responsive
+- The platform should be mobile-friendly
+- The design is inspired by the design of Camper shoe brand
+
 ### Key Objectives
 - Develop an intuitive platform for users to register and manage their items
 - Enable generation of PDF with printable tags containing QR codes and essential item info
@@ -21,7 +31,7 @@ FoundIT is a platform to register and track items. Its goal is to make it possib
 | Complete database schema                | To Do       | Bruno  |                      |
 | Implement PDF generation                | To Do       |        |                      |
 | Integrate QR code into PDF              | To Do       |        |                      |
-| Implement found item reporting          | To Do       |        | It's a public space, so it should be anonymous |
+| Implement found item reporting          | Done        | Bruno  | It's a public space, so it should be anonymous |
 | Implement notifications                 | To Do       |        | Email or in-app?     |
 | Unit Testing                            | To Do       |        |                      |
 | End-to-end flow testing                 | To Do       |        |                      |
