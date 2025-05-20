@@ -83,6 +83,7 @@ production:
     <<: *default
     database: found_it_production
     password: <%= ENV["POSTGRES_PASSWORD"] %>
+    username: postgres
     host: <%= ENV["DB_HOST"] %>
   cache:
     <<: *primary_production
