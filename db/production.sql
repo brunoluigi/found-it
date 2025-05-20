@@ -1,0 +1,4 @@
+CREATE DATABASE found_it_production;
+CREATE DATABASE found_it_production_cache;
+CREATE DATABASE found_it_production_queue;
+CREATE DATABASE found_it_production_cable;
