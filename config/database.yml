@@ -82,7 +82,7 @@ production:
   primary: &primary_production
     <<: *default
     database: found_it_production
-    password: <%= ENV["POSTGRES_ROOT_PASSWORD"] %>
+    password: <%= ENV["DB_PASSWORD"] %>
   cache:
     <<: *primary_production
     database: found_it_production_cache
