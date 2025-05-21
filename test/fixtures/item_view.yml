@@ -1,6 +1,5 @@
 first_view:
   ip_address: 192.168.1.1
   item: one
+  anon_user_hash: 1234567890
   found_it_message: "I found it!"
-
-second_view:
