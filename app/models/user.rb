@@ -28,8 +28,7 @@ class User < ApplicationRecord
           uid: auth.uid,
           name: auth.info.name || email,
           email_address: email,
-          password: SecureRandom.hex(16),
-          phone: ""
+          password: SecureRandom.hex(16)
         )
       end
     end
