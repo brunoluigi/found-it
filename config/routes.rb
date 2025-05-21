@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/auth/:provider/callback', to: 'omniauth_callbacks#google_oauth2'
+  get '/auth/failure', to: 'omniauth_callbacks#failure'
   get "items/index"
   # Public item info endpoint by UUID
   resources :item_views, only: [ :show, :update ] do
