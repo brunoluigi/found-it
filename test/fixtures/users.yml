@@ -3,7 +3,9 @@
 one:
   email_address: one@example.com
   password_digest: <%= password_digest %>
+  phone_number: 1234567890
 
 two:
   email_address: two@example.com
   password_digest: <%= password_digest %>
+  phone_number: 9876543210
