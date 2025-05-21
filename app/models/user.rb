@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email_address, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-  validates :phone, format: { with: /\A\d+\z/, message: "must contain only digits" }
+  validates :phone, format: { with: /\A\d+\z/, message: "must contain only digits" }, allow_blank: true
   validates :password, length: { minimum: 8 }, if: -> { password.present? }
 
   def self.find_or_create_from_omniauth(auth)
