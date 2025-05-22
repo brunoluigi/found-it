@@ -1,6 +1,6 @@
 # FoundIT Project Scope & Task Management
 
-_Last updated: 2025-05-07_
+_Last updated: 2025-05-10_
 
 ## Project Scope
 
@@ -33,7 +33,7 @@ FoundIT is a platform to register and track items. Its goal is to make it possib
 | Integrate QR code into PDF              | To Do       |        |                      |
 | Implement found item reporting          | Done        | Bruno  | It's a public space, so it should be anonymous |
 | Implement notifications                 | To Do       |        | Email or in-app?     |
-| Unit Testing                            | To Do       |        |                      |
+| Unit Testing                            | To Do       | Luis   |                      |
 | End-to-end flow testing                 | To Do       |        |                      |
 | Update documentation                    | To Do       |        |                      |
 | Prepare deployment                      | To Do       |        |                      |

@@ -10,8 +10,8 @@ class ItemViewTest < ActiveSupport::TestCase
     )
   end
 
-  test "should save item view" do
-    assert @new_item_view.save, "Failed to save the item view"
+  test "should save a valid item view" do
+    assert @new_item_view.save, "Failed to save a valid item view"
   end
 
   test "should not save item view without ip address" do

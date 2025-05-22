@@ -9,7 +9,7 @@ class ItemTest < ActiveSupport::TestCase
   end
 
   test "should save item" do
-    assert @item.save, "Failed to save the item"
+    assert @item.save, "Failed to save a valid item"
   end
 
   test "should not save item without user" do
