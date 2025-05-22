@@ -19,7 +19,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.save, "Saved the user without an email"
   end
 
-  test "should not save user without phone" do
+  test "should not save user without phone number" do
     @user.phone = nil
     assert_not @user.save, "Saved the user without a phone"
   end
