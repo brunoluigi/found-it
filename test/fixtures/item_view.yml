@@ -1,4 +1,4 @@
-first_view:
+first:
   ip_address: 192.168.1.1
   item: one
   anon_user_hash: 1234567890
