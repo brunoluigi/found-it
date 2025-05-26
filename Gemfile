@@ -65,7 +65,7 @@ group :development do
   gem "web-console", "~> 4.2.1"
 
   # Ruby Language Server for code intelligence features
-  gem "ruby-lsp", "~> 0.23.16", require: false
+  gem "ruby-lsp", "~> 0.23.23", require: false
 
   # Additional formatters for Ruby LSP
   gem "syntax_tree", "~> 6.2.0", require: false
