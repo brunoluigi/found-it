@@ -19,7 +19,7 @@ gem "tailwindcss-rails", "~> 4.0.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder", "~> 2.13.0"
 
-gem "phlex-rails", "~> 2.2.0"
+gem "phlex-rails", "~> 2.3.0"
 gem "tailwind_merge", "~> 1.2.0"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
