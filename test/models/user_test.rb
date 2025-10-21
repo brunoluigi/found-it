@@ -19,9 +19,9 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.save, "Saved the user without an email"
   end
 
-  test "should not save user without phone" do
+  test "should save user without phone" do
     @user.phone = nil
-    assert_not @user.save, "Saved the user without a phone"
+    assert @user.save, "Saved the user without a phone"
   end
 
   test "should not save user with invalid email" do
@@ -42,9 +42,10 @@ class UserTest < ActiveSupport::TestCase
     assert_not second_user.save, "Saved a user with a duplicate email"
   end
 
-  test "should not save user with invalid phone" do
-    @user.phone = "invalid_phone"
-    assert_not @user.save, "Saved the user with an invalid phone"
+  test "should save user with phone containing non-digits (they get stripped)" do
+    @user.phone = "123-456-7890"
+    assert @user.save, "Failed to save user with formatted phone"
+    assert_equal "1234567890", @user.phone, "Phone should be normalized to digits only"
   end
 
   test "should not save user without password" do
