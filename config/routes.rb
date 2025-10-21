@@ -29,6 +29,10 @@ Rails.application.routes.draw do
 
   get "lost_and_found/:id", to: "lost_and_found#show", as: :lost_and_found
 
+  # Legal pages
+  get "privacy", to: "static_pages#privacy", as: :privacy
+  get "terms", to: "static_pages#terms", as: :terms
+
   # Defines the root path route ("/")
   # For authenticated users, show welcome page
   constraints AuthenticationConstraint.authenticated do
