@@ -32,7 +32,7 @@ class UserTest < ActiveSupport::TestCase
   test "should not save user with duplicate email" do
     assert @user.save, "Failed to save the first user"
     assert User.exists?(email_address: "test@test.com"), "First user not found in database"
-    
+
     second_user = User.new(
       name: "Second User",
       email_address: "test@test.com",

@@ -52,7 +52,7 @@ group :development, :test do
   gem "debug", "~> 1.10.0", platforms: %i[ mri windows ], require: "debug/prelude"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", "~> 7.0.2", require: false
+  gem "brakeman", "~> 7.1.0", require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", "~> 1.1.0", require: false
@@ -69,7 +69,7 @@ group :development do
 
   # Additional formatters for Ruby LSP
   gem "syntax_tree", "~> 6.2.0", require: false
-  gem "ruby-lsp-rails", "~> 0.4.0", require: false
+  gem "ruby-lsp-rails", "~> 0.4.5", require: false
   gem "ruby-lsp-rspec", "~> 0.1.24", require: false
 end
 
