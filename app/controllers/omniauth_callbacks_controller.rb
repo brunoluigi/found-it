@@ -1,8 +1,8 @@
 class OmniauthCallbacksController < ApplicationController
-  allow_unauthenticated_access only: [:google_oauth2]
+  allow_unauthenticated_access only: [ :google_oauth2 ]
 
   def google_oauth2
-    auth = request.env['omniauth.auth']
+    auth = request.env["omniauth.auth"]
     user = User.find_or_create_from_omniauth(auth)
     if user.persisted?
       start_new_session_for(user)

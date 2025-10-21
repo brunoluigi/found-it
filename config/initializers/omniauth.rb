@@ -3,9 +3,9 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     Rails.application.credentials.dig(:google_oauth, :client_id),
     Rails.application.credentials.dig(:google_oauth, :client_secret),
     {
-      scope: 'email,profile',
-      prompt: 'select_account',
-      access_type: 'offline'
+      scope: "email,profile",
+      prompt: "select_account",
+      access_type: "offline"
     }
 end
 
