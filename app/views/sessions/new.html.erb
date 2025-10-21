@@ -37,6 +37,14 @@
       <div class="found-it-form-actions">
         <%= form.submit "Sign in", class: "found-it-button" %>
       </div>
+
+      <div class="found-it-divider">
+        <span>or</span>
+      </div>
+
+      <div class="found-it-form-actions">
+        <%= link_to "Sign in with Google", "/auth/google_oauth2", class: "found-it-button found-it-google-btn", method: :post %>
+      </div>
       
       <div class="found-it-links">
         <%= link_to "Forgot password?", new_password_path, class: "found-it-link" %>
