@@ -15,12 +15,12 @@ gem "turbo-rails", "~> 2.0.13"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails", "~> 1.3.4"
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-gem "tailwindcss-rails", "~> 4.0.0"
+gem "tailwindcss-rails", "~> 4.3.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder", "~> 2.13.0"
 
-gem "phlex-rails", "~> 2.2.0"
-gem "tailwind_merge", "~> 1.2.0"
+gem "phlex-rails", "~> 2.3.1"
+gem "tailwind_merge", "~> 1.3.1"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.20"
@@ -40,7 +40,7 @@ gem "solid_cable", "~> 3.0.7"
 gem "bootsnap", "~> 1.18.4", require: false
 
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
-gem "kamal", "~> 2.5.3", require: false
+gem "kamal", "~> 2.8.1", require: false
 
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", "~> 0.1.13", require: false
@@ -52,10 +52,10 @@ gem "rqrcode", "~> 3.1.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", "~> 1.10.0", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "debug", "~> 1.11.0", platforms: %i[ mri windows ], require: "debug/prelude"
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", "~> 7.0.2", require: false
+  gem "brakeman", "~> 7.1.0", require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", "~> 1.1.0", require: false
@@ -68,16 +68,16 @@ group :development do
   gem "web-console", "~> 4.2.1"
 
   # Ruby Language Server for code intelligence features
-  gem "ruby-lsp", "~> 0.23.16", require: false
+  gem "ruby-lsp", "~> 0.26.1", require: false
 
   # Additional formatters for Ruby LSP
   gem "syntax_tree", "~> 6.2.0", require: false
-  gem "ruby-lsp-rails", "~> 0.4.0", require: false
-  gem "ruby-lsp-rspec", "~> 0.1.22", require: false
+  gem "ruby-lsp-rails", "~> 0.4.5", require: false
+  gem "ruby-lsp-rspec", "~> 0.1.24", require: false
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara", "~> 3.40.0"
-  gem "selenium-webdriver", "~> 4.32.0"
+  gem "selenium-webdriver", "~> 4.37.0"
 end
