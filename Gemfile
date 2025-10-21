@@ -20,7 +20,7 @@ gem "tailwindcss-rails", "~> 4.3.0"
 gem "jbuilder", "~> 2.13.0"
 
 gem "phlex-rails", "~> 2.3.1"
-gem "tailwind_merge", "~> 1.2.0"
+gem "tailwind_merge", "~> 1.3.1"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.20"
