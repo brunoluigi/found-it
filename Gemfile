@@ -62,7 +62,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "ruby_ui", "~> 1.0.1", require: false
+  gem "ruby_ui", "~> 1.0.2", require: false
 
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console", "~> 4.2.1"
