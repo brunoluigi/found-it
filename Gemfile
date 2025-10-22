@@ -17,7 +17,7 @@ gem "stimulus-rails", "~> 1.3.4"
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails", "~> 4.3.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder", "~> 2.13.0"
+gem "jbuilder", "~> 2.14.1"
 
 gem "phlex-rails", "~> 2.3.1"
 gem "tailwind_merge", "~> 1.3.1"
