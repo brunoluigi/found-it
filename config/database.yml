@@ -85,6 +85,7 @@ production:
     password: <%= ENV["POSTGRES_PASSWORD"] %>
     username: postgres
     host: <%= ENV["DB_HOST"] %>
+    port: 5433
   cache:
     <<: *primary_production
     database: found_it_production_cache
